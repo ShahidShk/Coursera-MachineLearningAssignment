@@ -1,2 +1,2 @@
 # Coursera-MachineLearningAssignment
-R markdown and Report submission for Machine Learning Course
+Submission of R markdown with analysis for Machine Learning course assignment.
