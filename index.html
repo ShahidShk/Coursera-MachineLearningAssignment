@@ -69,7 +69,7 @@ normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
 <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
 "Arial",sans-serif'>It has become much easier and inexpensive to collect
 personal health activity data using wearable devices. People mostly quantify
-how much of an activity they do but not have accurately they do the activity. The
+how much of an activity they do but not how accurately they do the activity. The
 qualitative assessment of the weight lifting ‘Unilateral Dumbbell Biceps Curl’ exercise
 is to assess the accuracy of the activity. The participants where supervised by
 an experienced weight lifter to simulate 5 classes of the exercise. 1 class was
@@ -126,7 +126,7 @@ validation &lt;- pml.training[-inTrain,]</code></pre>
 <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
 "Arial",sans-serif'>Manual inspection of the data using the ‘summary ()’ function
 revealed that 60% of the covariates had approximately 90% missing values. (as seen in sample below) The
-observation indicated the raw censor values had negligible or no missing values
+observation indicated the raw censor and euler angle values had negligible or no missing values
 at all. Hence used the subset of columns providing the raw values, <span
 class=SpellE>i.e</span> data for the censors and <span class=SpellE><span
 class=GramE>euler</span></span> angles as the covariates. <o:p></o:p></span></p><br>
@@ -368,7 +368,7 @@ confusionMatrix(ValidationPred, validation$classe)</code></pre>
 ## Balanced Accuracy      0.9990   0.9960   0.9918   0.9869   0.9956</code></pre>
 </div><br>
 
-<h1><span style='font-size:24.0pt;line-height:107%'>Out of sample error<o:p></o:p></span></h1><br>
+<h1><span style='font-size:24.0pt;line-height:107%'>Out of sample error using MSE formula<o:p></o:p></span></h1><br>
 
 <pre class="r"><code>
 outofsampleerr = 1/length(ValidationPred) * (length(which(ValidationPred != validation$classe)))^2
